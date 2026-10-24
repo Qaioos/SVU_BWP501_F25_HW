@@ -164,8 +164,9 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }
-});
 
+
+    
 // ==========================================
 // 3. منطق تبديل الوضع الداكن (Dark Mode)
 // ==========================================
@@ -229,3 +230,5 @@ if (mobileMenuBtn && mobileMenu) {
         }
     });
 }
+
+});
