@@ -1,0 +1,561 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>دليل فعاليات الجامعة الافتراضية | الرئيسية</title>
+
+        <!-- Bootstrap 5 Grid & Flexbox Utilities ONLY (RTL) -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css"
+        />
+        <!-- Font Awesome Icons -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        />
+        <!-- Google Fonts (Cairo) -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap"
+            rel="stylesheet"
+        />
+        <!-- Custom CSS  -->
+        <link rel="stylesheet" href="assets/css/styles.css" />
+    </head>
+    <body class="d-flex flex-column min-vh-100">
+        <!-- HEADER / NAVBAR -->
+<!-- HEADER / NAVBAR -->
+<header class="site-header py-3">
+    <div class="container">
+        <div class="d-flex align-items-center justify-content-between">
+            <!-- Logo -->
+            <a class="brand-logo d-flex align-items-center gap-2" href="index.html">
+                <i class="fa-solid fa-calendar-days fs-3"></i>
+                <span>دليل فعاليات SVU</span>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <nav class="d-none d-md-flex align-items-center gap-2">
+                <a class="custom-nav-link active" href="index.html">الرئيسية</a>
+                <a class="custom-nav-link" href="events.html">كل الفعاليات</a>
+                <a class="custom-nav-link" href="about.html">عن الدليل</a>
+                <a class="custom-nav-link" href="contact.html">اتصل بنا</a>
+            </nav>
+
+            <!-- Header Actions (Dark Mode + Mobile Menu Toggle) -->
+            <div class="d-flex align-items-center gap-2">
+                <!-- Dark Mode Toggle Button -->
+                <button type="button" id="themeToggle" class="theme-toggle-btn" title="تبديل الوضع الداكن/النهاري">
+                    <i class="fa-solid fa-moon" id="themeIcon"></i>
+                </button>
+
+                <!-- Mobile Menu Icon (أيقونة إظهار/إخفاء القائمة في الجوال) -->
+                <button type="button" id="mobileMenuBtn" class="mobile-menu-btn d-md-none" title="القائمة">
+                    <i class="fa-solid fa-bars" id="menuIcon"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Collapsible Menu (القائمة المنسدلة للجوال) -->
+        <div id="mobileMenu" class="mobile-menu d-md-none">
+            <nav class="d-flex flex-column gap-2 pt-3 border-top border-secondary mt-3">
+                <a class="custom-nav-link active" href="index.html">الرئيسية</a>
+                <a class="custom-nav-link" href="events.html">كل الفعاليات</a>
+                <a class="custom-nav-link" href="about.html">عن الدليل</a>
+                <a class="custom-nav-link" href="contact.html">اتصل بنا</a>
+            </nav>
+        </div>
+    </div>
+</header>
+
+        <!-- MAIN CONTENT -->
+        <main>
+            <!-- SECTION: TEAM MEMBERS / IDS -->
+            <section class="team-banner">
+                <div class="container">
+                    <div
+                        class="d-flex flex-wrap align-items-center justify-content-between gap-2"
+                    >
+                        <div class="d-flex align-items-center gap-2">
+                            <span class="team-badge"
+                                ><i class="fa-solid fa-users me-1"></i> فريق
+                                العمل:</span
+                            >
+                            <span>مادة BWP401 — إشراف د. باسل الخطيب</span>
+                        </div>
+                        <div class="d-flex flex-wrap gap-3">
+                            <span
+                                ><strong>الطالب 1:</strong> (<span
+                                    class="student-id"
+                                    >qais_342809</span
+                                >)</span
+                            >
+                            <span
+                                ><strong>الطالب 2:</strong> (<span
+                                    class="student-id"
+                                >
+                                </span
+                                >)</span
+                            >
+                            <span
+                                ><strong>الطالب 3:</strong> (<span
+                                    class="student-id"
+                                >
+                                </span
+                                >)</span
+                            >
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 1: FEATURED EVENTS CAROUSEL/SLIDER -->
+            <section class="py-4">
+                <div class="container">
+                    <div
+                        class="d-flex align-items-center justify-content-between mb-3"
+                    >
+                        <h2
+                            class="h4 fw-bold mb-0"
+                            style="color: var(--primary-color)"
+                        >
+                            <i
+                                class="fa-solid fa-star me-2"
+                                style="color: var(--accent-color)"
+                            ></i
+                            >فعاليات بارزة هذا الأسبوع
+                        </h2>
+                    </div>
+
+                    <div
+                        id="featuredCarousel"
+                        class="carousel slide slider-container"
+                        data-bs-ride="carousel"
+                    >
+                        <div class="carousel-indicators">
+                            <button
+                                type="button"
+                                data-bs-target="#featuredCarousel"
+                                data-bs-slide-to="0"
+                                class="active"
+                            ></button>
+                            <button
+                                type="button"
+                                data-bs-target="#featuredCarousel"
+                                data-bs-slide-to="1"
+                            ></button>
+                            <button
+                                type="button"
+                                data-bs-target="#featuredCarousel"
+                                data-bs-slide-to="2"
+                            ></button>
+                        </div>
+
+                        <div class="carousel-inner">
+                            <!-- Slide 1 -->
+                            <div class="carousel-item active">
+                                <div class="slider-image-frame">
+                                    <img
+                                        src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1200&q=80"
+                                        alt="المؤتمر العلمي"
+                                    />
+                                    <div
+                                        class="slider-custom-caption d-none d-md-block"
+                                    >
+                                        <span
+                                            class="badge-custom badge-academic mb-2 d-inline-block"
+                                            >أكاديمي ومؤتمرات</span
+                                        >
+                                        <h3 class="h5 fw-bold mb-1">
+                                            المؤتمر السنوي للذكاء الاصطناعي
+                                            وتطبيقاته 2026
+                                        </h3>
+                                        <p class="small mb-3">
+                                            يقام في القاعة الكبرى ويضم متحدثين
+                                            دوليين لمناقشة أحدث أوراق البحث
+                                            العلمي.
+                                        </p>
+                                        <a
+                                            href="event.html"
+                                            class="btn-custom-primary"
+                                            >التفاصيل والتسجيل</a
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Slide 2 -->
+                            <div class="carousel-item">
+                                <div class="slider-image-frame">
+                                    <img
+                                        src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1200&q=80"
+                                        alt="معرض التوظيف"
+                                    />
+                                    <div
+                                        class="slider-custom-caption d-none d-md-block"
+                                    >
+                                        <span
+                                            class="badge-custom badge-culture mb-2 d-inline-block"
+                                            >معارض وثقافة</span
+                                        >
+                                        <h3 class="h5 fw-bold mb-1">
+                                            معرض التوظيف والتطوير المهني 2026
+                                        </h3>
+                                        <p class="small mb-3">
+                                            فرصتك للتواصل المباشر مع أكثر من 30
+                                            شركة برمجية وتكنولوجية رائدة.
+                                        </p>
+                                        <a
+                                            href="event.html"
+                                            class="btn-custom-primary"
+                                            >التفاصيل والتسجيل</a
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Slide 3 -->
+                            <div class="carousel-item">
+                                <div class="slider-image-frame">
+                                    <img
+                                        src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=1200&q=80"
+                                        alt="الدوري الرياضي"
+                                    />
+                                    <div
+                                        class="slider-custom-caption d-none d-md-block"
+                                    >
+                                        <span
+                                            class="badge-custom badge-sports mb-2 d-inline-block"
+                                            >رياضة ومسابقات</span
+                                        >
+                                        <h3 class="h5 fw-bold mb-1">
+                                            نهائي البطولة الجامعية للشطرنج
+                                            والرياضات الإلكترونية
+                                        </h3>
+                                        <p class="small mb-3">
+                                            منافسات حماسية بين كليات الجامعة مع
+                                            جوائز تقديرية قيّمة للمشاركين.
+                                        </p>
+                                        <a
+                                            href="event.html"
+                                            class="btn-custom-primary"
+                                            >التفاصيل والتسجيل</a
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button
+                            class="carousel-control-prev"
+                            type="button"
+                            data-bs-target="#featuredCarousel"
+                            data-bs-slide="prev"
+                        >
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button
+                            class="carousel-control-next"
+                            type="button"
+                            data-bs-target="#featuredCarousel"
+                            data-bs-slide="next"
+                        >
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 2: QUICK CATEGORIES -->
+            <section
+                class="py-4 my-2"
+                style="
+                    background-color: #ffffff;
+                    border-top: 1px solid var(--border-color);
+                    border-bottom: 1px solid var(--border-color);
+                "
+            >
+                <div class="container text-center">
+                    <h3 class="h6 fw-bold text-muted mb-3">
+                        تصفح الفعاليات حسب التصنيف السريع
+                    </h3>
+                    <div class="d-flex flex-wrap justify-content-center gap-2">
+                        <a
+                            href="events.html?cat=all"
+                            class="category-btn active"
+                            >الكل</a
+                        >
+                        <a href="events.html?cat=academic" class="category-btn">
+                            <i class="fa-solid fa-graduation-cap me-1"></i>
+                            أكاديمي
+                        </a>
+                        <a href="events.html?cat=culture" class="category-btn">
+                            <i class="fa-solid fa-masks-theater me-1"></i> ثقافة
+                            ورش
+                        </a>
+                        <a href="events.html?cat=sports" class="category-btn">
+                            <i class="fa-solid fa-trophy me-1"></i> رياضة
+                        </a>
+                        <a href="events.html?cat=tech" class="category-btn">
+                            <i class="fa-solid fa-laptop-code me-1"></i> تقنية
+                            ودورات
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 3: LATEST EVENTS GRID -->
+            <section class="py-5">
+                <div class="container">
+                    <div
+                        class="d-flex align-items-center justify-content-between mb-4"
+                    >
+                        <div>
+                            <h2
+                                class="h4 fw-bold mb-1"
+                                style="color: var(--text-primary)"
+                            >
+                                <i
+                                    class="fa-regular fa-clock me-2"
+                                    style="color: var(--primary-color)"
+                                ></i
+                                >أحدث الفعاليات القادمة
+                            </h2>
+                            <p class="text-muted small mb-0">
+                                جدول النشاطات المتاحة للتسجيل والحضور هذا الشهر
+                            </p>
+                        </div>
+                        <a href="events.html" class="btn-custom-outline"
+                            >عرض الكل <i class="fa-solid fa-arrow-left me-1"></i
+                        ></a>
+                    </div>
+
+                    <!-- Bootstrap Grid for layout responsiveness -->
+                    <div class="row g-4">
+                        <!-- Event Card 1 -->
+                        <div class="col-md-6 col-lg-4">
+                            <div class="custom-card d-flex flex-column">
+                                <div class="card-img-wrapper">
+                                    <img
+                                        src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=600&q=80"
+                                        alt="ورشة عمل"
+                                    />
+                                </div>
+                                <div class="card-content flex-grow-1">
+                                    <div
+                                        class="d-flex justify-content-between align-items-center mb-2"
+                                    >
+                                        <span
+                                            class="badge-custom badge-workshop"
+                                            >ورشة عمل</span
+                                        >
+                                        <small class="text-muted"
+                                            ><i
+                                                class="fa-regular fa-calendar me-1"
+                                            ></i>
+                                            20 أكتوبر 2026</small
+                                        >
+                                    </div>
+                                    <h3 class="card-title-text">
+                                        أساسيات تطوير المواقع باستخدام HTML &
+                                        CSS
+                                    </h3>
+                                    <p class="card-desc-text">
+                                        ورشة تدريبية عملية موجهة لطلاب السنة
+                                        الأولى لبناء أول موقع إلكتروني شخصي.
+                                    </p>
+                                </div>
+                                <div
+                                    class="card-footer-custom d-flex justify-content-between align-items-center"
+                                >
+                                    <small class="text-muted"
+                                        ><i
+                                            class="fa-solid fa-location-dot me-1"
+                                        ></i>
+                                        مدرج أونلاين - Zoom</small
+                                    >
+                                    <a
+                                        href="event.html"
+                                        class="btn-custom-outline"
+                                        >التفاصيل</a
+                                    >
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Event Card 2 -->
+                        <div class="col-md-6 col-lg-4">
+                            <div class="custom-card d-flex flex-column">
+                                <div class="card-img-wrapper">
+                                    <img
+                                        src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&w=600&q=80"
+                                        alt="حفل التخرج"
+                                    />
+                                </div>
+                                <div class="card-content flex-grow-1">
+                                    <div
+                                        class="d-flex justify-content-between align-items-center mb-2"
+                                    >
+                                        <span class="badge-custom badge-culture"
+                                            >احتفالية</span
+                                        >
+                                        <small class="text-muted"
+                                            ><i
+                                                class="fa-regular fa-calendar me-1"
+                                            ></i>
+                                            25 أكتوبر 2026</small
+                                        >
+                                    </div>
+                                    <h3 class="card-title-text">
+                                        حفل استقبال الطلاب الجدد وخريجي دفعة
+                                        2026
+                                    </h3>
+                                    <p class="card-desc-text">
+                                        لقاء تعريفي وتكريمي للطلاب المتفوقين مع
+                                        فقرات تفاعلية وترحيبية.
+                                    </p>
+                                </div>
+                                <div
+                                    class="card-footer-custom d-flex justify-content-between align-items-center"
+                                >
+                                    <small class="text-muted"
+                                        ><i
+                                            class="fa-solid fa-location-dot me-1"
+                                        ></i>
+                                        القاعة المركزية</small
+                                    >
+                                    <a
+                                        href="event.html"
+                                        class="btn-custom-outline"
+                                        >التفاصيل</a
+                                    >
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Event Card 3 -->
+                        <div class="col-md-6 col-lg-4">
+                            <div class="custom-card d-flex flex-column">
+                                <div class="card-img-wrapper">
+                                    <img
+                                        src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=600&q=80"
+                                        alt="ندوة علمية"
+                                    />
+                                </div>
+                                <div class="card-content flex-grow-1">
+                                    <div
+                                        class="d-flex justify-content-between align-items-center mb-2"
+                                    >
+                                        <span
+                                            class="badge-custom badge-academic"
+                                            >ندوة علمية</span
+                                        >
+                                        <small class="text-muted"
+                                            ><i
+                                                class="fa-regular fa-calendar me-1"
+                                            ></i>
+                                            02 نوفمبر 2026</small
+                                        >
+                                    </div>
+                                    <h3 class="card-title-text">
+                                        الأمن السيبراني وحماية البيانات الحساسة
+                                    </h3>
+                                    <p class="card-desc-text">
+                                        ندوة حوارية لمناقشة أحدث التهديدات
+                                        الرقمية وطرق التأمين المتقدمة.
+                                    </p>
+                                </div>
+                                <div
+                                    class="card-footer-custom d-flex justify-content-between align-items-center"
+                                >
+                                    <small class="text-muted"
+                                        ><i
+                                            class="fa-solid fa-location-dot me-1"
+                                        ></i>
+                                        منصة SVU التعليمية</small
+                                    >
+                                    <a
+                                        href="event.html"
+                                        class="btn-custom-outline"
+                                        >التفاصيل</a
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="site-footer mt-auto">
+            <div class="container">
+                <div class="row g-4">
+                    <!-- Col 1: About SVU Events -->
+                    <div class="col-lg-4 col-md-6">
+                        <h5 class="footer-title">
+                            <i class="fa-solid fa-calendar-days me-2"></i>دليل
+                            فعاليات SVU
+                        </h5>
+                        <p class="small">
+                            المنصة الرسمية الموحدة لاستكشاف ومتابعة كافة الأنشطة
+                            الأكاديمية والورش والمؤتمرات في الجامعة الافتراضية
+                            السورية.
+                        </p>
+                    </div>
+
+                    <!-- Col 2: Quick Links -->
+                    <div class="col-lg-3 col-md-6">
+                        <h5 class="footer-title">روابط سريعة</h5>
+                        <ul class="footer-links small">
+                            <li><a href="index.html">الرئيسية</a></li>
+                            <li><a href="events.html">جدول الفعاليات</a></li>
+                            <li><a href="about.html">عن المنصة ورؤيتها</a></li>
+                            <li><a href="contact.html">تواصل معنا</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Col 3: Contact & Social -->
+                    <div class="col-lg-5 col-md-12">
+                        <h5 class="footer-title">تواصل معنا وتابع جديدنا</h5>
+                        <p class="small mb-2">
+                            <i class="fa-solid fa-envelope me-2"></i>
+                            info@svuonline.org
+                        </p>
+                        <div class="d-flex gap-2 mt-3">
+                            <a href="#" class="social-icon"
+                                ><i class="fa-brands fa-facebook"></i
+                            ></a>
+                            <a href="#" class="social-icon"
+                                ><i class="fa-brands fa-x-twitter"></i
+                            ></a>
+                            <a href="#" class="social-icon"
+                                ><i class="fa-brands fa-linkedin"></i
+                            ></a>
+                            <a href="#" class="social-icon"
+                                ><i class="fa-brands fa-youtube"></i
+                            ></a>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="footer-divider" />
+
+                <div
+                    class="d-flex flex-column flex-sm-row justify-content-between align-items-center small"
+                >
+                    <p class="mb-0">
+                        جميع الحقوق محفوظة &copy; 2026 — مشروع مادة BWP401
+                    </p>
+                    <p class="mb-0">الجامعة الافتراضية السورية SVU</p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Bootstrap 5 JS Bundle (للسلايدر والتنقل) -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Custom JS -->
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>

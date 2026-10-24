@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>دليل فعاليات الجامعة الافتراضية | اتصل بنا</title>
+
+        <!-- Bootstrap 5 Grid & Flexbox Utilities ONLY (RTL) -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css"
+        />
+        <!-- Font Awesome Icons -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        />
+        <!-- Google Fonts (Cairo) -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap"
+            rel="stylesheet"
+        />
+        <!-- Custom CSS (ألوان ثابتة وتصميم مخصص) -->
+        <link rel="stylesheet" href="assets/css/styles.css" />
+    </head>
+    <body class="d-flex flex-column min-vh-100">
+        <!-- HEADER / NAVBAR -->
+<header class="site-header py-3">
+    <div class="container">
+        <div class="d-flex align-items-center justify-content-between">
+            <!-- Logo -->
+            <a class="brand-logo d-flex align-items-center gap-2" href="index.html">
+                <i class="fa-solid fa-calendar-days fs-3"></i>
+                <span>دليل فعاليات SVU</span>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <nav class="d-none d-md-flex align-items-center gap-2">
+                <a class="custom-nav-link active" href="index.html">الرئيسية</a>
+                <a class="custom-nav-link" href="events.html">كل الفعاليات</a>
+                <a class="custom-nav-link" href="about.html">عن الدليل</a>
+                <a class="custom-nav-link" href="contact.html">اتصل بنا</a>
+            </nav>
+
+            <!-- Header Actions (Dark Mode + Mobile Menu Toggle) -->
+            <div class="d-flex align-items-center gap-2">
+                <!-- Dark Mode Toggle Button -->
+                <button type="button" id="themeToggle" class="theme-toggle-btn" title="تبديل الوضع الداكن/النهاري">
+                    <i class="fa-solid fa-moon" id="themeIcon"></i>
+                </button>
+
+                <!-- Mobile Menu Icon (أيقونة إظهار/إخفاء القائمة في الجوال) -->
+                <button type="button" id="mobileMenuBtn" class="mobile-menu-btn d-md-none" title="القائمة">
+                    <i class="fa-solid fa-bars" id="menuIcon"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Collapsible Menu (القائمة المنسدلة للجوال) -->
+        <div id="mobileMenu" class="mobile-menu d-md-none">
+            <nav class="d-flex flex-column gap-2 pt-3 border-top border-secondary mt-3">
+                <a class="custom-nav-link active" href="index.html">الرئيسية</a>
+                <a class="custom-nav-link" href="events.html">كل الفعاليات</a>
+                <a class="custom-nav-link" href="about.html">عن الدليل</a>
+                <a class="custom-nav-link" href="contact.html">اتصل بنا</a>
+            </nav>
+        </div>
+    </div>
+</header>
+
+        <!-- PAGE TITLE BANNER -->
+        <section class="page-banner mb-4">
+            <div class="container">
+                <h1 class="banner-title">
+                    <i class="fa-solid fa-headset me-2"></i>تواصل معنا
+                </h1>
+                <p class="banner-subtitle mb-0">
+                    نحن هنا للإجابة على استفساراتك واستقبال اقتراحاتك حول
+                    فعاليات الجامعة الافتراضية.
+                </p>
+            </div>
+        </section>
+
+        <!-- MAIN CONTENT -->
+        <main class="container mb-5">
+            <!-- Bootstrap Grid for Page Layout -->
+            <div class="row g-4">
+                <!-- CONTACT FORM SECTION -->
+                <div class="col-lg-7">
+                    <div class="contact-card h-100">
+                        <h2
+                            class="h5 fw-bold mb-3 pb-2"
+                            style="
+                                color: var(--text-primary);
+                                border-bottom: 1px solid var(--border-color);
+                            "
+                        >
+                            <i
+                                class="fa-regular fa-paper-plane me-2"
+                                style="color: var(--primary-color)"
+                            ></i
+                            >أرسل لنا رسالة
+                        </h2>
+                        <p class="text-muted small mb-4">
+                            قم بتعبئة النموذج أدناه وسيقوم فريق الدليل بالرد
+                            عليك في أقرب وقت ممكن.
+                        </p>
+
+                        <!-- Bootstrap Alert: Success Message -->
+                        <div
+                            id="formSuccessAlert"
+                            class="alert alert-success alert-dismissible fade show d-none mb-4"
+                            role="alert"
+                        >
+                            <i class="fa-solid fa-circle-check me-2"></i>
+                            <strong>تم الإرسال بنجاح!</strong> شكرًا لتواصلك
+                            معنا، سيتم الرد عليك في أقرب وقت.
+                            <button
+                                type="button"
+                                class="btn-close"
+                                onclick="
+                                    this.parentElement.classList.add('d-none')
+                                "
+                            ></button>
+                        </div>
+
+                        <!-- Bootstrap Alert: Error/Failure Message -->
+                        <div
+                            id="formErrorAlert"
+                            class="alert alert-danger alert-dismissible fade show d-none mb-4"
+                            role="alert"
+                        >
+                            <i class="fa-solid fa-circle-exclamation me-2"></i>
+                            <span id="errorMessageText"
+                                >حدث خطأ في إدخال البيانات.</span
+                            >
+                            <button
+                                type="button"
+                                class="btn-close"
+                                onclick="
+                                    this.parentElement.classList.add('d-none')
+                                "
+                            ></button>
+                        </div>
+
+                        <!-- FORM -->
+                        <form id="contactForm" novalidate>
+                            <div class="row g-3">
+                                <!-- Full Name -->
+                                <div class="col-md-6">
+                                    <label for="fullName" class="custom-label"
+                                        >الاسم الكامل
+                                        <span class="text-danger"
+                                            >*</span
+                                        ></label
+                                    >
+                                    <input
+                                        type="text"
+                                        class="custom-input"
+                                        id="fullName"
+                                        placeholder="أدخل اسمك الثلاثي"
+                                    />
+                                </div>
+
+                                <!-- Email -->
+                                <div class="col-md-6">
+                                    <label for="email" class="custom-label"
+                                        >البريد الإلكتروني
+                                        <span class="text-danger"
+                                            >*</span
+                                        ></label
+                                    >
+                                    <input
+                                        type="email"
+                                        class="custom-input"
+                                        id="email"
+                                        placeholder="example@svuonline.org"
+                                    />
+                                </div>
+
+                                <!-- Subject/Topic -->
+                                <div class="col-12">
+                                    <label for="subject" class="custom-label"
+                                        >موضوع الاستفسار
+                                        <span class="text-danger"
+                                            >*</span
+                                        ></label
+                                    >
+                                    <select class="custom-select" id="subject">
+                                        <option value="" selected disabled>
+                                            اختر الموضوع...
+                                        </option>
+                                        <option value="general">
+                                            استفسار عام عن الفعاليات
+                                        </option>
+                                        <option value="propose">
+                                            اقتراح فعالية أو نشاط جديد
+                                        </option>
+                                        <option value="tech">
+                                            دعم فني في الموقع
+                                        </option>
+                                        <option value="complaint">
+                                            شكوى أو ملاحظة
+                                        </option>
+                                    </select>
+                                </div>
+
+                                <!-- Message Body -->
+                                <div class="col-12">
+                                    <label for="message" class="custom-label"
+                                        >نص الرسالة
+                                        <span class="text-danger"
+                                            >*</span
+                                        ></label
+                                    >
+                                    <textarea
+                                        class="custom-textarea"
+                                        id="message"
+                                        rows="5"
+                                        placeholder="اكتب تفاصيل استفسارك هنا..."
+                                    ></textarea>
+                                </div>
+
+                                <!-- Terms Checkbox -->
+                                <div class="col-12">
+                                    <div
+                                        class="d-flex align-items-center gap-2"
+                                    >
+                                        <input
+                                            type="checkbox"
+                                            id="termsCheck"
+                                            style="
+                                                width: 16px;
+                                                height: 16px;
+                                                cursor: pointer;
+                                            "
+                                        />
+                                        <label
+                                            class="small text-muted mb-0"
+                                            for="termsCheck"
+                                        >
+                                            أوافق على سياسة الخصوصية واستخدام
+                                            البيانات للتواصل معي.
+                                            <span class="text-danger">*</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <!-- Submit Button -->
+                                <div class="col-12 mt-4">
+                                    <button
+                                        type="submit"
+                                        class="btn-custom-primary py-2 px-4"
+                                    >
+                                        <i
+                                            class="fa-solid fa-paper-plane me-2"
+                                        ></i
+                                        >إرسال الرسالة
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- CONTACT INFO & MAP SECTION -->
+                <div class="col-lg-5">
+                    <div class="d-flex flex-column gap-4 h-100">
+                        <!-- Info Card -->
+                        <div class="contact-card">
+                            <h3
+                                class="h5 fw-bold mb-3 pb-2"
+                                style="
+                                    color: var(--text-primary);
+                                    border-bottom: 1px solid var(--border-color);
+                                "
+                            >
+                                <i
+                                    class="fa-solid fa-location-dot me-2"
+                                    style="color: var(--primary-color)"
+                                ></i
+                                >معلومات التواصل
+                            </h3>
+
+                            <ul
+                                class="list-unstyled d-flex flex-column gap-3 mb-0"
+                            >
+                                <li class="d-flex align-items-start gap-3">
+                                    <div class="contact-icon-box">
+                                        <i class="fa-solid fa-building"></i>
+                                    </div>
+                                    <div>
+                                        <strong class="d-block small text-muted"
+                                            >العنوان الرئيسي:</strong
+                                        >
+                                        <span
+                                            class="fw-semibold"
+                                            style="color: var(--text-primary)"
+                                            >دمشق - دمر - التل - مبنى الجامعة
+                                            الافتراضية السورية</span
+                                        >
+                                    </div>
+                                </li>
+
+                                <li class="d-flex align-items-start gap-3">
+                                    <div class="contact-icon-box">
+                                        <i class="fa-solid fa-envelope"></i>
+                                    </div>
+                                    <div>
+                                        <strong class="d-block small text-muted"
+                                            >البريد الإلكتروني المباشر:</strong
+                                        >
+                                        <a
+                                            href="mailto:info@svuonline.org"
+                                            class="text-decoration-none fw-semibold"
+                                            style="color: var(--primary-color)"
+                                            >info@svuonline.org</a
+                                        >
+                                    </div>
+                                </li>
+
+                                <li class="d-flex align-items-start gap-3">
+                                    <div class="contact-icon-box">
+                                        <i class="fa-solid fa-clock"></i>
+                                    </div>
+                                    <div>
+                                        <strong class="d-block small text-muted"
+                                            >أوقات الدعم والمتابعة:</strong
+                                        >
+                                        <span
+                                            class="fw-semibold"
+                                            style="color: var(--text-primary)"
+                                            >الأحد - الخميس (09:00 صباحاً -
+                                            03:00 مساءً)</span
+                                        >
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Map Container -->
+                        <!-- LOCATION MAP SECTION -->
+                        <div class="custom-card p-4">
+                            <h2
+                                class="h5 fw-bold mb-3 pb-2"
+                                style="
+                                    color: var(--text-primary);
+                                    border-bottom: 1px solid var(--border-color);
+                                "
+                            >
+                                <i
+                                    class="fa-solid fa-map-location-dot me-2"
+                                    style="color: var(--primary-color)"
+                                ></i
+                                >مكان انعقاد الفعالية
+                            </h2>
+                            <p class="text-muted small mb-3">
+                                <i class="fa-solid fa-circle-info me-1"></i>
+                                تعقد الفعالية هجينياً (حضوري في القاعة الكبرى
+                                وأونلاين عبر منصة Zoom).
+                            </p>
+
+                            <!-- خريطة ثابتة بصورة وفق متطلبات الوظيفة -->
+                            <div
+                                style="
+                                    border: 1px solid var(--border-color);
+                                    border-radius: var(--radius-sm);
+                                    overflow: hidden;
+                                "
+                            >
+                                <img
+                                    src="assets/img/map.png"
+                                    alt="خريطة موقع الفعالية"
+                                    class="w-100 d-block"
+                                    style="max-height: 320px; object-fit: cover"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="site-footer mt-auto">
+            <div class="container">
+                <div class="row g-4">
+                    <!-- Col 1: About SVU Events -->
+                    <div class="col-lg-4 col-md-6">
+                        <h5 class="footer-title">
+                            <i class="fa-solid fa-calendar-days me-2"></i>دليل
+                            فعاليات SVU
+                        </h5>
+                        <p class="small">
+                            المنصة الرسمية الموحدة لاستكشاف ومتابعة كافة الأنشطة
+                            الأكاديمية والورش والمؤتمرات في الجامعة الافتراضية
+                            السورية.
+                        </p>
+                    </div>
+
+                    <!-- Col 2: Quick Links -->
+                    <div class="col-lg-3 col-md-6">
+                        <h5 class="footer-title">روابط سريعة</h5>
+                        <ul class="footer-links small">
+                            <li><a href="index.html">الرئيسية</a></li>
+                            <li><a href="events.html">جدول الفعاليات</a></li>
+                            <li><a href="about.html">عن المنصة ورؤيتها</a></li>
+                            <li><a href="contact.html">تواصل معنا</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Col 3: Contact & Social -->
+                    <div class="col-lg-5 col-md-12">
+                        <h5 class="footer-title">تواصل معنا وتابع جديدنا</h5>
+                        <p class="small mb-2">
+                            <i class="fa-solid fa-envelope me-2"></i>
+                            info@svuonline.org
+                        </p>
+                        <div class="d-flex gap-2 mt-3">
+                            <a href="#" class="social-icon"
+                                ><i class="fa-brands fa-facebook"></i
+                            ></a>
+                            <a href="#" class="social-icon"
+                                ><i class="fa-brands fa-x-twitter"></i
+                            ></a>
+                            <a href="#" class="social-icon"
+                                ><i class="fa-brands fa-linkedin"></i
+                            ></a>
+                            <a href="#" class="social-icon"
+                                ><i class="fa-brands fa-youtube"></i
+                            ></a>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="footer-divider" />
+
+                <div
+                    class="d-flex flex-column flex-sm-row justify-content-between align-items-center small"
+                >
+                    <p class="mb-0">
+                        جميع الحقوق محفوظة &copy; 2026 — مشروع مادة BWP401
+                    </p>
+                    <p class="mb-0">الجامعة الافتراضية السورية SVU</p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Bootstrap 5 JS Bundle -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Custom JS (يشمل التحقق من صحة النموذج) -->
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
