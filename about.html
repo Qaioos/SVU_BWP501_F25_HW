@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>دليل فعاليات الجامعة الافتراضية | عن الدليل</title>
+
+        <!-- Bootstrap 5 Grid & Flexbox Utilities ONLY (RTL) -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css"
+        />
+        <!-- Font Awesome Icons -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        />
+        <!-- Google Fonts (Cairo) -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lemonada:wght@300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet"
+        />
+        <!-- Custom CSS  -->
+        <link rel="stylesheet" href="assets/css/styles.css" />
+    </head>
+    <body class="d-flex flex-column min-vh-100">
+        <!-- HEADER / NAVBAR -->
+<header class="site-header py-3">
+    <div class="container">
+        <div class="d-flex align-items-center justify-content-between">
+            <!-- Logo -->
+            <a class="brand-logo d-flex align-items-center gap-2" href="index.html">
+                <i class="fa-solid fa-calendar-days fs-3"></i>
+                <span>دليل فعاليات SVU</span>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <nav class="d-none d-md-flex align-items-center gap-2">
+                <a class="custom-nav-link active" href="index.html">الرئيسية</a>
+                <a class="custom-nav-link" href="events.html">كل الفعاليات</a>
+                <a class="custom-nav-link" href="about.html">عن الدليل</a>
+                <a class="custom-nav-link" href="contact.html">اتصل بنا</a>
+            </nav>
+
+            <!-- Header Actions (Dark Mode + Mobile Menu Toggle) -->
+            <div class="d-flex align-items-center gap-2">
+                <!-- Dark Mode Toggle Button -->
+                <button type="button" id="themeToggle" class="theme-toggle-btn" title="تبديل الوضع الداكن/النهاري">
+                    <i class="fa-solid fa-moon" id="themeIcon"></i>
+                </button>
+
+                <!-- Mobile Menu Icon (أيقونة إظهار/إخفاء القائمة في الجوال) -->
+                <button type="button" id="mobileMenuBtn" class="mobile-menu-btn d-md-none" title="القائمة">
+                    <i class="fa-solid fa-bars" id="menuIcon"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Collapsible Menu (القائمة المنسدلة للجوال) -->
+        <div id="mobileMenu" class="mobile-menu d-md-none">
+            <nav class="d-flex flex-column gap-2 pt-3 border-top border-secondary mt-3">
+                <a class="custom-nav-link active" href="index.html">الرئيسية</a>
+                <a class="custom-nav-link" href="events.html">كل الفعاليات</a>
+                <a class="custom-nav-link" href="about.html">عن الدليل</a>
+                <a class="custom-nav-link" href="contact.html">اتصل بنا</a>
+            </nav>
+        </div>
+    </div>
+</header>
+
+        <!-- PAGE TITLE BANNER -->
+        <section class="page-banner mb-4">
+            <div class="container">
+                <h1 class="banner-title">
+                    <i class="fa-solid fa-circle-info me-2"></i>عن الدليل
+                    ورؤيتنا
+                </h1>
+                <p class="banner-subtitle mb-0">
+                    تعرّف على المنصة الموحدة لإدارة ونشر أنشطة الجامعة
+                    الافتراضية السورية وفريق العمل المطور.
+                </p>
+            </div>
+        </section>
+
+        <!-- MAIN CONTENT -->
+        <main class="container mb-5">
+            <!-- SECTION 1: ABOUT & VISION -->
+            <section class="custom-card p-4 p-md-5 mb-5">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-7">
+                        <span
+                            class="badge-custom badge-academic d-inline-block mb-3"
+                            >رؤية المنصة ورسالتها</span
+                        >
+                        <h2
+                            class="h4 fw-bold mb-3"
+                            style="color: var(--text-primary)"
+                        >
+                            المنصة التفاعلية الموحدة لفعاليات الجامعة الافتراضية
+                            السورية
+                        </h2>
+                        <p class="text-muted mb-3">
+                            تُعد منصة
+                            <strong>"دليل فعاليات SVU"</strong> شرياناً تنفذ منه
+                            جميع الأنشطة الأكاديمية، والندوات العلمية، وورش
+                            العمل التدريبية، والمعارض الطلابية إلى كافة كوادر
+                            وطلاب الجامعة داخل سوريا وخارجها.
+                        </p>
+                        <p class="text-muted mb-4">
+                            هدفنا هو تسهيل وصول الطالب إلى الحدث المناسب في
+                            الوقت المناسب، وتوفير بيئة تفاعلية تمكّن الطلاب من
+                            تنظيم أوقاتهم والانضمام للأنشطة المختلفة بنقرة زر
+                            واحدة.
+                        </p>
+
+                        <div class="row g-3">
+                            <div class="col-sm-6">
+                                <div
+                                    class="feature-box d-flex align-items-center gap-3"
+                                >
+                                    <i
+                                        class="fa-solid fa-bullseye feature-icon"
+                                    ></i>
+                                    <div>
+                                        <strong
+                                            class="d-block h6 mb-1"
+                                            style="color: var(--text-primary)"
+                                            >الرؤية</strong
+                                        >
+                                        <small class="text-muted"
+                                            >الارتقاء بالنشاط الطلابي والأكاديمي
+                                            الرقمي.</small
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div
+                                    class="feature-box d-flex align-items-center gap-3"
+                                >
+                                    <i
+                                        class="fa-solid fa-hands-holding-circle feature-icon"
+                                    ></i>
+                                    <div>
+                                        <strong
+                                            class="d-block h6 mb-1"
+                                            style="color: var(--text-primary)"
+                                            >الرسالة</strong
+                                        >
+                                        <small class="text-muted"
+                                            >ربط مجتمع الجامعة ببيئة تعلم مستمرة
+                                            وتفاعلية.</small
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-5 text-center">
+                        <img
+                            src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=700&q=80"
+                            alt="فريق العمل"
+                            class="img-fluid rounded-4"
+                            style="box-shadow: var(--shadow-md)"
+                        />
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 2: TEAM MEMBERS / DEVELOPERS -->
+            <section class="mb-5">
+                <div class="text-center mb-4">
+                    <span
+                        class="badge-custom badge-workshop d-inline-block mb-2"
+                        >تطوير المشروع</span
+                    >
+                    <h2 class="h4 fw-bold" style="color: var(--text-primary)">
+                        فريق عمل المشروع (BWP401)
+                    </h2>
+                    <p class="text-muted small">
+                        تم تطوير هذا الموقع بواسطة طلاب كلية تقانة المعلومات تحت
+                        إشراف د. باسل الخطيب
+                    </p>
+                </div>
+
+                <!-- Grid Layout via Bootstrap -->
+                <div class="row g-4 justify-content-center">
+                    <!-- Team Member 1 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div
+                            class="team-card h-100 d-flex flex-column align-items-center justify-content-between"
+                        >
+                            <div>
+                                <img
+                                    src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80"
+                                    class="team-avatar mb-3"
+                                    alt="عضو الفريق 1"
+                                />
+                                <h3
+                                    class="h6 fw-bold mb-1"
+                                    style="color: var(--text-primary)"
+                                >
+                                    الاسم الثلاثي للطالب الأول
+                                </h3>
+                                <p class="team-role mb-3">
+                                    <i class="fa-solid fa-code me-1"></i> مطور
+                                    واجهات أمامية (Front-End)
+                                </p>
+                            </div>
+                            <span class="team-id-badge">ID: 123456</span>
+                        </div>
+                    </div>
+
+                    <!-- Team Member 2 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div
+                            class="team-card h-100 d-flex flex-column align-items-center justify-content-between"
+                        >
+                            <div>
+                                <img
+                                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80"
+                                    class="team-avatar mb-3"
+                                    alt="عضو الفريق 2"
+                                />
+                                <h3
+                                    class="h6 fw-bold mb-1"
+                                    style="color: var(--text-primary)"
+                                >
+                                    الاسم الثلاثي للطالب الثاني
+                                </h3>
+                                <p class="team-role mb-3">
+                                    <i class="fa-solid fa-pen-ruler me-1"></i>
+                                    مصمم تجربة المستخدم (UI/UX)
+                                </p>
+                            </div>
+                            <span class="team-id-badge">ID: 234567</span>
+                        </div>
+                    </div>
+
+                    <!-- Team Member 3 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div
+                            class="team-card h-100 d-flex flex-column align-items-center justify-content-between"
+                        >
+                            <div>
+                                <img
+                                    src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80"
+                                    class="team-avatar mb-3"
+                                    alt="عضو الفريق 3"
+                                />
+                                <h3
+                                    class="h6 fw-bold mb-1"
+                                    style="color: var(--text-primary)"
+                                >
+                                    الاسم الثلاثي للطالب الثالث
+                                </h3>
+                                <p class="team-role mb-3">
+                                    <i class="fa-solid fa-list-check me-1"></i>
+                                    إدارة المحتوى والتثبت
+                                </p>
+                            </div>
+                            <span class="team-id-badge">ID: 345678</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 3: PUBLISHING POLICIES -->
+            <section class="policy-box">
+                <div class="row align-items-center g-4">
+                    <div class="col-md-4 text-center">
+                        <i
+                            class="fa-solid fa-shield-halved policy-icon-wrapper mb-3"
+                        ></i>
+                        <h3
+                            class="h5 fw-bold"
+                            style="color: var(--text-primary)"
+                        >
+                            سياسة ومعايير النشر
+                        </h3>
+                        <p class="text-muted small mb-0">
+                            شروط إضافة ومراجعة الفعاليات في الدليل
+                        </p>
+                    </div>
+                    <div class="col-md-8">
+                        <ul class="list-unstyled mb-0 d-flex flex-column gap-3">
+                            <li class="d-flex align-items-start gap-2">
+                                <i
+                                    class="fa-solid fa-circle-check check-icon mt-1"
+                                ></i>
+                                <div>
+                                    <strong
+                                        class="d-block small"
+                                        style="color: var(--text-primary)"
+                                        >التبعية الأكاديمية:</strong
+                                    >
+                                    <span class="text-muted small"
+                                        >يجب أن تكون الفعالية منقولة أو منظمة
+                                        برعاية أحد البرامج الأكاديمية أو الأندية
+                                        الطلابية المعتمدة في SVU.</span
+                                    >
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-start gap-2">
+                                <i
+                                    class="fa-solid fa-circle-check check-icon mt-1"
+                                ></i>
+                                <div>
+                                    <strong
+                                        class="d-block small"
+                                        style="color: var(--text-primary)"
+                                        >وضوح التفاصيل:</strong
+                                    >
+                                    <span class="text-muted small"
+                                        >اشتمال طلب تقديم الفعالية على العنوان،
+                                        التاريخ، رابط المنصة (Zoom/SVU)، والوصف
+                                        العام.</span
+                                    >
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-start gap-2">
+                                <i
+                                    class="fa-solid fa-circle-check check-icon mt-1"
+                                ></i>
+                                <div>
+                                    <strong
+                                        class="d-block small"
+                                        style="color: var(--text-primary)"
+                                        >الالتزام بالسياسات العامة:</strong
+                                    >
+                                    <span class="text-muted small"
+                                        >عدم نشر أي محتوى يخالف الشروط التعليمية
+                                        والتنظيمية للجامعة الافتراضية
+                                        السورية.</span
+                                    >
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="site-footer mt-auto">
+            <div class="container">
+                <div class="row g-4">
+                    <!-- Col 1: About SVU Events -->
+                    <div class="col-lg-4 col-md-6">
+                        <h5 class="footer-title">
+                            <i class="fa-solid fa-calendar-days me-2"></i>دليل
+                            فعاليات SVU
+                        </h5>
+                        <p class="small">
+                            المنصة الرسمية الموحدة لاستكشاف ومتابعة كافة الأنشطة
+                            الأكاديمية والورش والمؤتمرات في الجامعة الافتراضية
+                            السورية.
+                        </p>
+                    </div>
+
+                    <!-- Col 2: Quick Links -->
+                    <div class="col-lg-3 col-md-6">
+                        <h5 class="footer-title">روابط سريعة</h5>
+                        <ul class="footer-links small">
+                            <li><a href="index.html">الرئيسية</a></li>
+                            <li><a href="events.html">جدول الفعاليات</a></li>
+                            <li><a href="about.html">عن المنصة ورؤيتها</a></li>
+                            <li><a href="contact.html">تواصل معنا</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Col 3: Contact & Social -->
+                    <div class="col-lg-5 col-md-12">
+                        <h5 class="footer-title">تواصل معنا وتابع جديدنا</h5>
+                        <p class="small mb-2">
+                            <i class="fa-solid fa-envelope me-2"></i>
+                            info@svuonline.org
+                        </p>
+                        <div class="d-flex gap-2 mt-3">
+                            <a href="#" class="social-icon"
+                                ><i class="fa-brands fa-facebook"></i
+                            ></a>
+                            <a href="#" class="social-icon"
+                                ><i class="fa-brands fa-x-twitter"></i
+                            ></a>
+                            <a href="#" class="social-icon"
+                                ><i class="fa-brands fa-linkedin"></i
+                            ></a>
+                            <a href="#" class="social-icon"
+                                ><i class="fa-brands fa-youtube"></i
+                            ></a>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="footer-divider" />
+
+                <div
+                    class="d-flex flex-column flex-sm-row justify-content-between align-items-center small"
+                >
+                    <p class="mb-0">
+                        جميع الحقوق محفوظة &copy; 2026 — مشروع مادة BWP401
+                    </p>
+                    <p class="mb-0">الجامعة الافتراضية السورية SVU</p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Bootstrap 5 JS Bundle -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Custom JS -->
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
